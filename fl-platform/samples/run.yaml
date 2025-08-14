@@ -1,0 +1,25 @@
+# Sample FL run configuration
+run_name: demo_binary_classification
+framework: pytorch
+num_rounds: 1
+num_clients: 1
+
+# Training configuration
+local_epochs: 5
+batch_size: 32
+learning_rate: 0.01
+
+# Dataset configuration
+dataset_labels:
+  - default
+  - dummy
+
+# Client selection (optional - uses all available if not specified)
+# client_ids:
+#   - client-001
+#   - client-002
+
+# Advanced settings (for future use)
+aggregation_strategy: fedavg
+min_clients_per_round: 1
+client_fraction: 1.0
